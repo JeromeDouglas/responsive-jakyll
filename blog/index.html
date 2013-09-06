@@ -1,0 +1,22 @@
+---
+layout: default
+author: Jerome Douglas
+email: jeromedouglas24@gmail.com
+title: My Jekyll Framework
+---
+<p> 
+	Howdy, my name is {{page.author}} welcome to my blog. if you like it email me at <a href="mailto:{{page.email}}">{{page.email}}</a>
+</p>
+
+<ul class="entries">
+  {% for post in site.posts %}
+ 
+  <li>
+    <a href="{{ post.url }}">
+      <img src="{{ post.image }}" />
+      <h3>{{ post.title }}</h3>
+    </a>
+  </li>
+ 
+  {% endfor %}
+</ul>
